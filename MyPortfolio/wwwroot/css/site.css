@@ -1,0 +1,388 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+*::-webkit-scrollbar {
+    display:none;
+}
+
+body {
+  margin-bottom: 60px;
+  margin:0px;
+}
+
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade in effect */
+}
+
+.fade-in.active {
+    opacity: 1; /* Fully visible when active */
+}
+
+.fade-in-element {
+    opacity: 0;
+    transition: opacity 1s ease; /* Existing transition */
+}
+
+.fade-in-element.active {
+    opacity: 1;
+}
+
+/* arrow fade in */
+.category-text {
+    position: relative; /* Allows positioning of the arrow within the div */
+    transition: font-size 0.3s ease-out;
+}
+
+.category-text:hover {
+    font-size: 68px; /* Adjust as desired. Decrease the value for more shrink */
+    transition: font-size 0.3s ease; /* Transition for text size */
+}
+
+.fas.fa-arrow-right {
+    opacity: 0; /* Hide the arrow initially */
+    position: absolute; /* Position relative to the parent */
+    right: 10px; /* Adjust right offset as needed */
+    top: 50%; /* Vertically center the arrow */
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease; /* Add a fade-in/out transition */
+}
+
+.category-text:hover .fas.fa-arrow-right {
+    opacity: 1; /* Make the arrow visible on hover */
+}
+
+.clickable-div {
+    cursor: pointer; /* Changes mouse to a hand pointer on hover */
+}
+
+nav {
+    background-color:#1a1a1a;
+}
+
+#navbar_logo {
+    max-height: 2.5rem; /* Adjust to your desired height */
+}
+
+.container {
+    max-width:none;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+section {
+    padding-left:50px;
+    padding-right:50px;
+}
+
+#hero_page {
+    height: calc(100vh - 56px);
+    background-color: #1a1a1a;
+}
+
+#brandidentity_page, #productdesign_page, #webdesign_page, #marketing_page {
+    background-color: #1a1a1a;
+}
+
+
+.chivo-mono-h1 {
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+#my_name {
+    color: #f7931e;
+    font-style: italic;
+}
+
+.chivo-mono-h2 {
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #cccccc;
+}
+
+.chivo-mono-h4 {
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+}
+
+.category-text {
+    font-size: 72px;
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    text-align: left;
+}
+
+.showcase-main-text {
+    font-size: 72px;
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-align: left;
+}
+
+.showcase-sub-text {
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: #cccccc;
+}
+
+.category-text i {
+    float: right; /* Float the arrow icons to the right */
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#btn-contact {
+    padding: 5px 15px; /* Adjust padding for larger button */
+    font-size: 14px; /* Adjust font size as needed */
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+#btn-contact:hover, #btn-contact:active {
+    background-color: #cccccc;
+    color:black;
+}
+
+#myworks_button {
+    padding: 15px 30px; /* Adjust padding for larger button */
+    /*text*/
+    font-size: 18px; /* Adjust font size as needed */
+    font-family: "Chivo Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    /*button design*/
+    background-color: #cccccc;
+    border-color: #cccccc;
+    transition: transform 0.3s ease; /* Target for size transition */
+}
+
+#myworks_button:active {
+    border-color:black;
+}
+
+#myworks_button:hover {
+    transform: scale(1.1);
+}
+
+/* Text Animation - Option 1: Pseudo-element */
+#myworks_button::after {
+    position: absolute; /* Allows positioning within the button */
+    display: block; /* Necessary for the animation */
+    transition: transform 0.3s ease;
+}
+
+#myworks_button:hover::after {
+    transform: translateY(-5px);
+}
+
+
+
+
+/*SECTIONS*/
+.handles svg path {
+    stroke: #e2e2e2 !important;
+}
+
+.dots { /* Or the specific class targeting your dot elements */
+    display: none;
+}
+
+.dots span {
+    background: #fff !important;
+    opacity: 0.5
+}
+
+.dots span.active {
+    opacity: 1
+}
+
+.PostSlide {
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.PostSlide {
+    max-width: 1300px;
+    margin: 10px auto 40px;
+}
+
+.PostSlide .innerContainer .slider {
+    display: flex;
+    width: 1280px;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.PostSlide .innerContainer .slider .slide {
+    display: block;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 400px;
+    height: 400px;
+    margin: 0 10px;
+}
+
+.PostSlide .innerContainer .slider {
+    position: relative;
+    z-index: 2;
+}
+
+.PostSlide .innerContainer .handles {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -230px;
+    width: 103%;
+    cursor: pointer;
+    margin-right: -20px;
+    margin-left: -20px;
+    z-index: 4;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.PostSlide .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.PostSlide .dots span {
+    border-radius: 10px;
+    background: #CBCBCB;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.PostSlide .slider * {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.PostSlide .handles > span {
+    transition: opacity 0.3s;
+}
+
+.PostSlide .handles .prev {
+    opacity: 0;
+}
+
+.PostSlide .handles .next {
+    opacity: 1;
+}
+
+.PostSlide .handles * {
+    user-select: none;
+}
+
+.PostSlide .innerContainer .slider .slide {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 1200px !important;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1280px) {
+    .PostSlide .innerContainer .handles {
+        width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 960px !important;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 960px !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+    .PostSlide .innerContainer .slider {
+        width: 640px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .PostSlide .innerContainer .slider {
+        width: 300px !important;
+    }
+}
+
+.PostSlide .innerContainer, .PostSlide .slider, .PostSlide .handles, .PostSlide .dots {
+    direction: ltr;
+}
+
+.PostSlide .innerContainer .slider .slide > div {
+    display: block;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 8px
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* To maintain aspect ratio if needed */
+}

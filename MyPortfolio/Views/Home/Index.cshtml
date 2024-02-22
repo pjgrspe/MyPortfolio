@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*HERO SECTION*@
+<section class="vh-100" id="hero_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="text-lg-start text-center mb-4 chivo-mono-h1">
+                    Hi, my name is <span id="my_name">Patrick Jason Gorospe</span>,<br />
+                    a front-end developer and design enthusiast.<br />
+                </h1>
+                <h2 class="text-lg-start text-center mb-5 chivo-mono-h2">
+                    Let's build something amazing.
+                </h2>
+                <button id="myworks_button" class="btn btn-primary rounded-pill btn-lg mt-4" onclick="scrollToNextSection()">
+                    My Works <i class="ms-1 fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*CATEGORY SECTION*@
+<section class="vh-100" id="categories_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center fade-in-element">
+                <h4 class="text-lg-start text-center mb-2 chivo-mono-h4">
+                    I can help you with...
+                </h4>
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center category-text clickable-div" data-target-section="#brandidentity_page">BRAND IDENTITY<i class="ms-auto fas fa-arrow-right d-lg-block d-none fade-in"></i></h3>
+                </div>
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center category-text clickable-div" data-target-section="#productdesign_page">PRODUCT DESIGN<i class="ms-auto fas fa-arrow-right d-lg-block d-none fade-in"></i></h3>
+                    
+                </div>
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center category-text clickable-div" data-target-section="#webdesign_page">WEB DESIGN<i class="ms-auto fas fa-arrow-right d-lg-block d-none fade-in"></i></h3>
+                    
+                </div>
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center category-text clickable-div" data-target-section="#marketing_page">MARKETING<i class="ms-auto fas fa-arrow-right d-lg-block d-none fade-in"></i></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*BRAND IDENTITY SECTION*@
+<section class="vh-100" id="brandidentity_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            @*CONTENT*@
+            <div class="col-12 text-center">
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center showcase-main-text">BRAND IDENTITY</h3>
+                    <h4 class="text-lg-start text-center mt-2 showcase-sub-text">
+                        I can help you with...
+                    </h4>
+                 </div>
+                 @*CAROUSEL*@
+                <div class="fade-in-element PostSlide mt-4">
+
+                    <div class="innerContainer active">
+                        <div class="slider">
+                            <div class="slide">
+                                <img src="~/img/brand/DP.jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/brand/CEAATTS.jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/brand/new official logo-01.jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/brand/CARAPPLOGO1.jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/brand/mmhotel.jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/brand/BASE LOGO.jpg" alt="Image Description">
+                            </div>
+                        </div>
+                        <div class="handles">
+                            <span class="prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <span class="next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99991 19.92L15.5199 13.4C16.2899 12.63 16.2899 11.37 15.5199 10.6L8.99991 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="dots d-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*PRODUCT DESIGN SECTION*@
+<section class="vh-100" id="productdesign_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            @*CONTENT*@
+            <div class="col-12 text-center">
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-end text-center showcase-main-text">PRODUCT DESIGN</h3>
+                    <h4 class="text-lg-end text-center mt-2 showcase-sub-text">
+                        I can help you with...
+                    </h4>
+                </div>
+                @*CAROUSEL*@
+                <div class="fade-in-element PostSlide mt-4">
+
+                    <div class="innerContainer active">
+                        <div class="slider">
+                            <div class="slide">
+                                <img src="~/img/product/perplex (1).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (2).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (3).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (4).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (5).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (6).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (7).jpg" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/product/perplex (8).jpg" alt="Image Description">
+                            </div>
+                        </div>
+                        <div class="handles">
+                            <span class="prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <span class="next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99991 19.92L15.5199 13.4C16.2899 12.63 16.2899 11.37 15.5199 10.6L8.99991 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="dots d-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*WEB DESIGN SECTION*@
+<section class="vh-100" id="webdesign_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            @*CONTENT*@
+            <div class="col-12 text-center">
+                <div class="fade-in-element mt-3">
+                    <h3 class="text-lg-start text-center showcase-main-text">WEB DESIGN</h3>
+                    <h4 class="text-lg-start text-center mt-2 showcase-sub-text">
+                        I can help you with...
+                    </h4>
+                </div>
+                @*CAROUSEL*@
+                <div class="fade-in-element PostSlide mt-4">
+                    <div class="innerContainer active">
+                        <div class="slider">
+                            <div class="slide">
+                                <img src="~/img/web/ice (1).png" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/web/ice (2).png" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/web/ice (3).png" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/web/ice (4).png" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/web/ice (5).png" alt="Image Description">
+                            </div>
+                            <div class="slide">
+                                <img src="~/img/web/ice (6).png" alt="Image Description">
+                            </div>
+                        </div>
+                        <div class="handles">
+                            <span class="prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <span class="next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99991 19.92L15.5199 13.4C16.2899 12.63 16.2899 11.37 15.5199 10.6L8.99991 4.07999"
+                                          stroke="rgb(55 65 81/1)" stroke-width="3" stroke-miterlimit="10"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="dots d-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*MARKETING SECTION*@
+<section class="vh-100" id="marketing_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                Section 6
+            </div>
+        </div>
+    </div>
+</section>
+
+@*CONTACT SECTION*@
+<section class="vh-100" id="contact_page">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                Contact
+            </div>
+        </div>
+    </div>
+</section>
+
