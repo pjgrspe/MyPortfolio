@@ -1,3 +1,4 @@
+/*PAGE STYLE*/
 html {
   font-size: 14px;
 }
@@ -22,8 +23,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  margin:0px;
+    margin-bottom: 60px;
+    margin: 0px;
+    font-family: "Chivo Mono", monospace;
 }
 
 #category_page {
@@ -38,6 +40,36 @@ footer {
     background-color: #cccccc;
 }
 
+nav {
+    background-color: #1a1a1a;
+}
+
+#navbar_logo {
+    max-height: 2.5rem; /* Adjust to your desired height */
+}
+
+.container {
+    max-width: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+section {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#hero_page {
+    height: calc(100vh - 56px);
+    background-color: #1a1a1a;
+}
+
+#brandidentity_page, #productdesign_page, #webdesign_page, #marketing_page {
+    background-color: #1a1a1a;
+}
+
+
+/*EFFECTS*/
 
 .fade-in {
     opacity: 0; /* Initially hidden */
@@ -85,37 +117,10 @@ footer {
     cursor: pointer; /* Changes mouse to a hand pointer on hover */
 }
 
-nav {
-    background-color:#1a1a1a;
-}
 
-#navbar_logo {
-    max-height: 2.5rem; /* Adjust to your desired height */
-}
-
-.container {
-    max-width:none;
-    padding-left:0px;
-    padding-right:0px;
-}
-
-section {
-    padding-left:50px;
-    padding-right:50px;
-}
-
-#hero_page {
-    height: calc(100vh - 56px);
-    background-color: #1a1a1a;
-}
-
-#brandidentity_page, #productdesign_page, #webdesign_page, #marketing_page {
-    background-color: #1a1a1a;
-}
-
+/*TEXT STYLES*/
 
 .chivo-mono-h1 {
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -128,7 +133,6 @@ section {
 }
 
 .chivo-mono-h2 {
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -136,7 +140,6 @@ section {
 }
 
 .chivo-mono-h4 {
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
@@ -145,7 +148,6 @@ section {
 
 .category-text {
     font-size: 72px;
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -155,7 +157,6 @@ section {
 
 .showcase-main-text {
     font-size: 72px;
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -164,7 +165,6 @@ section {
 }
 
 .showcase-sub-text {
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
@@ -177,7 +177,6 @@ section {
 
 .contact-text {
     font-size: 32px;
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -187,7 +186,6 @@ section {
 
 .contact-sub-text {
     font-size: 16px;
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
@@ -197,7 +195,6 @@ section {
 
 .contact-info-text {
     font-size: 20px;
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -209,6 +206,8 @@ section {
 }
 
 
+/*BUTTON STYLES*/
+
 .btn:focus, .btn:active {
     outline: none !important;
     box-shadow: none !important;
@@ -217,7 +216,6 @@ section {
 #btn-contact {
     padding: 5px 15px; /* Adjust padding for larger button */
     font-size: 14px; /* Adjust font size as needed */
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -233,7 +231,6 @@ section {
     padding: 15px 30px; /* Adjust padding for larger button */
     /*text*/
     font-size: 18px; /* Adjust font size as needed */
-    font-family: "Chivo Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -265,8 +262,7 @@ section {
 
 
 
-
-/*SECTIONS*/
+/*SECTIONS STYLES*/
 .item-grid {
     display: flex; /* Activate Flexbox layout */
     flex-wrap: wrap; /* Allow items to wrap to multiple lines */
@@ -274,6 +270,54 @@ section {
     margin: 10px auto;
     position: relative;
     overflow: hidden;
+}
+
+.item-4grid {
+    position: relative;
+    float: left; /* Keep this for now */
+    width: 25% !important; /* Change width to 25%  */
+    flex: 1 0 23% !important; /* Update flex values (more on this below) */
+    margin: 10px;
+    background-color: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item-4grid:hover:after {
+    transform: scale(2) translateX(0%) translateY(0%) translateZ(0) rotate(-28deg);
+}
+
+.item-4grid:hover .item-image {
+    transform: scale(1.2) translateZ(0);
+}
+
+.item-4grid:hover .item-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item-5grid {
+    position: relative;
+    float: left; /* Keep this for now */
+    width: 20% !important; /* Change width to 25%  */
+    flex: 1 0 16% !important; /* Update flex values (more on this below) */
+    margin: 10px;
+    background-color: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item-5grid:hover:after {
+    transform: scale(2) translateX(0%) translateY(0%) translateZ(0) rotate(-28deg);
+}
+
+.item-5grid:hover .item-image {
+    transform: scale(1.2) translateZ(0);
+}
+
+.item-5grid:hover .item-text {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .item {
@@ -284,7 +328,7 @@ section {
     margin: 10px;
     background-color: none; /* Semi-transparent background */
     overflow: hidden;
-
+    border-radius: 10px;
 }
 
 .item:hover:after {
@@ -311,16 +355,16 @@ section {
     transition: transform 750ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-    .item-image img {
-        position: static; /* Remove absolute positioning */
-        top: auto; /* Reset top value */
-        left: auto;
-        width: auto; /* Allow natural width */
-        max-width: 100%; /* Optionally constrain max-width*/
-        height: auto;
-        line-height: 0;
-        transform: scale(1.1); /* Example: increase size by 10%  */
-    }
+.item-image img {
+    position: static; /* Remove absolute positioning */
+    top: auto; /* Reset top value */
+    left: auto;
+    width: auto; /* Allow natural width */
+    max-width: 100%; /* Optionally constrain max-width*/
+    height: auto;
+    line-height: 0;
+    transform: scale(1.1); /* Example: increase size by 10%  */
+}
 
 .item-image::before {
     content: "";
@@ -358,12 +402,13 @@ section {
     margin: 5px 0 0 0;
 }
 
-.item-text-dek {
+/*THIS FOR THE SUBTEXT IN THE GALLERY*/
+/*.item-text-dek {
     text-transform: uppercase;
     font-style: 14px;
     opacity: 0.7;
     margin: 0;
-}
+}*/
 
 .item-link {
     position: absolute;
@@ -375,4 +420,25 @@ section {
     line-height: 0;
     overflow: hidden;
     text-indent: -9999px;
+}
+
+/*CONTACT MODULES*/
+
+#contact-module1 {
+    height: 60px;
+    width: 450px;
+    border-radius: 10px;
+    /* Outline */
+    outline: 2px solid black; /* Example color and thickness */
+    margin-bottom:50px;
+}
+
+#contact-module1-text {
+    /*FONT*/
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    margin-bottom:0px;
 }
