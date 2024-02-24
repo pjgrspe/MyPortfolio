@@ -4,6 +4,7 @@
 
     const wrapper = document.getElementById('wrapper');
     wrapper.style.marginTop = document.getElementById('loader-wrapper').offsetHeight + 'px';
+
 }
 
 function hideLoader() {
@@ -20,3 +21,14 @@ showLoader(); // Show on initial page load
 // ... Later, when content is ready ...
 hideLoader(); 
 
+function preventScroll(event) {
+    event.preventDefault();
+}
+
+// Disable scrolling
+document.body.classList.add('disable-scroll');
+
+// Enable scrolling after 4 seconds
+setTimeout(() => {
+    document.body.classList.remove('disable-scroll');
+}, 4000); // 4000 milliseconds = 4 seconds
