@@ -28,6 +28,70 @@ body {
     font-family: "Chivo Mono", monospace;
 }
 
+/*LOADER*/
+
+.full-screen-loader {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    position: fixed;
+    transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+    -webkit-animation: move-up 0.65s;
+    animation: move-up 0.65s;
+    animation-fill-mode: forwards;
+}
+
+    .full-screen-loader.main-loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.loader-img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+}
+
+.full-screen-loader:nth-child(1) {
+    background-color: #000000;
+    -webkit-animation-delay: 2.7s;
+    animation-delay: 2.7s;
+}
+
+.full-screen-loader:nth-child(2) {
+    background-image: linear-gradient( 135deg, #F7931E 10%, #FBCB92 100%);
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+.full-screen-loader:nth-child(3) {
+    background-color: #111111;
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+@keyframes move-up {
+    0% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+
 #category_page {
     background-color:#cccccc;
 }
@@ -68,6 +132,29 @@ section {
     background-color: #1a1a1a;
 }
 
+/*HERO PAGE EFFECTS*/
+/* Style for the text that will be typed */
+.rise-up-text {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Shifted down by 30 pixels */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.rise-up-text.show {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move back to original position */
+}
+
+.rise-up-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.rise-up-button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /*EFFECTS*/
 
@@ -82,11 +169,13 @@ section {
 
 .fade-in-element {
     opacity: 0;
-    transition: opacity 1.5s ease; /* Existing transition */
+    transform: translateY(30px); /* Shifted down by 30 pixels */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .fade-in-element.active {
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* arrow fade in */
@@ -173,32 +262,6 @@ section {
 
 .category-text i {
     float: right; /* Float the arrow icons to the right */
-}
-
-.contact-text {
-    font-size: 32px;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    color: black;
-    text-align: left;
-}
-
-.contact-sub-text {
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    color: black;
-    margin-top:100px;
-}
-
-.contact-info-text {
-    font-size: 20px;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: black;
 }
 
 .footer-text {
@@ -422,7 +485,45 @@ section {
     text-indent: -9999px;
 }
 
-/*CONTACT MODULES*/
+/*CONTACT PAGE*/
+
+#right-side-col {
+    margin-top:70px;
+}
+
+#left-side-col {
+    margin-top: 100px;
+}
+
+#contact-column{
+    margin-bottom: 100px;
+}
+
+.contact-text {
+    font-size: 32px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    text-align: left;
+}
+
+.contact-sub-text {
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+    margin-top: 100px;
+}
+
+.contact-info-text {
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
 
 #contact-module1 {
     height: 60px;
@@ -430,7 +531,7 @@ section {
     border-radius: 10px;
     /* Outline */
     outline: 2px solid black; /* Example color and thickness */
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 #contact-module1-text {
@@ -441,4 +542,58 @@ section {
     font-style: normal;
     color: black;
     margin-bottom:0px;
+}
+
+#contact-module2 {
+    height: 250px;
+    width: 450px;
+    border-radius: 10px;
+    /* Outline */
+    outline: 2px solid black;
+}
+
+#contact-module2-text {
+    /*FONT*/
+    font-size: 30px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#contact_button {
+    padding: 15px 10px; /* Adjust padding for larger button */
+    width: 300px;
+    margin: 0 auto;
+    /*text*/
+    font-size: 18px; /* Adjust font size as needed */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    /*button design*/
+    background-color: #f7931e;
+    border-color: black;
+    outline: 1px solid black;
+    transition: transform 0.3s ease; /* Target for size transition */
+}
+
+#contact_button:active {
+    border-color: black;
+}
+
+#contact_button:hover {
+    transform: scale(1.1);
+}
+
+/* Text Animation - Option 1: Pseudo-element */
+#contact_button::after {
+    position: absolute; /* Allows positioning within the button */
+    display: block; /* Necessary for the animation */
+    transition: transform 0.3s ease;
+}
+
+#contact_button:hover::after {
+    transform: translateY(-5px);
 }

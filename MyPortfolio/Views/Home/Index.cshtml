@@ -1,20 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@await Html.PartialAsync("_Loader")
 @*HERO SECTION*@
 <section class="vh-100" id="hero_page">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
-                <h1 class="text-lg-start text-center mb-4 chivo-mono-h1">
-                    Hi, my name is <span id="my_name">Patrick Jason Gorospe</span>,<br />
+                <h1 class="text-lg-start text-center mb-4 chivo-mono-h1 rise-up-text">
+                    Hi, my name is <span class="" id="my_name">Patrick Jason Gorospe</span>,<br />
                     a front-end developer and design enthusiast.<br />
                 </h1>
-                <h2 class="text-lg-start text-center mb-5 chivo-mono-h2">
+                <h2 class="text-lg-start text-center mb-5 chivo-mono-h2 rise-up-text">
                     Let's build something amazing.
                 </h2>
-                <button id="myworks_button" class="btn btn-primary rounded-pill btn-lg mt-4" onclick="scrollToNextSection()">
+                <button id="myworks_button" class="btn btn-primary rounded-pill btn-lg mt-4 rise-up-button" onclick="scrollToNextSection()">
                     My Works <i class="ms-1 fas fa-arrow-down"></i>
                 </button>
             </div>
@@ -432,12 +432,12 @@
 
 
 @*CONTACT SECTION*@
-<section class="vh-100" id="contact_page">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
+<section class="d-flex flex-column" id="contact_page">
+    <div class="container flex-grow-1 d-flex flex-column">
+        <div class="row flex-grow-1 align-items-center" id="contact-column">
             <div class="col-lg-6 text-center text-lg-start">
-                <div class="fade-in-element mt-5">
-                    <h3 class="contact-text">
+                <div class="fade-in-element" id="right-side-col">
+                    <h3 class="text-center text-lg-start contact-text">
                     If you feel like I might be a great fit,
                     I would love to hear from you!
                     </h3>
@@ -455,9 +455,11 @@
             <div class="col-lg-6">
                 <div class="contact-form">
                     <div class="row">
-                        <div class="col d-flex flex-column align-items-center justify-content-center fade-in-element">
+                        <div class="col d-flex flex-column align-items-center justify-content-center fade-in-element" id="left-side-col">
                             <div class="flex-item item-1 d-flex align-items-center justify-content-between" id="contact-module1">
-                                <h4 class="ms-3 d-flex align-items-start" id="contact-module1-text">Follow me</h4>
+                                <h4 class="ms-3 d-flex align-items-start" id="contact-module1-text">
+                                    Follow me
+                                </h4>
                                 <div class="me-3 d-flex">
                                     <a href="https://github.com/pjgrspe" class="me-3">
                                         <img src="~/img/social-logos/github.svg" width="25" height="25" alt="Github Logo">
@@ -470,10 +472,13 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="flex-item item-2 d-flex flex-column align-items-start justify-content-center" id="contact-module2">
-                                <h4 class="ms-3" id="contact-module1-text">
-                                    TEXT
-                                </h4>
+                            <div class="flex-item item-1 d-flex align-items-center justify-content-center" id="contact-module2">
+                                <div class="d-flex flex-column col-12 text-center"> <h4 id="contact-module2-text">Ready to talk?</h4>
+                                    <p class="subtext">Let's discuss your project ideas!</p> 
+                                    <button id="contact_button" class="btn btn-primary rounded-pill btn-lg mt-3 d-flex justify-content-center" onclick="">
+                                        Start a project
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

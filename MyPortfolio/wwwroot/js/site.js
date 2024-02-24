@@ -1,5 +1,31 @@
 ﻿window.history.scrollRestoration = 'manual'; 
 
+//RISEUP EFFECT
+function riseUpText(element) {
+    element.classList.add('rise-up-text', 'show');
+}
+
+function riseUpButton(button) {  // New function for the button
+    button.classList.add('rise-up-button', 'show');
+}
+
+function startAnimation() {
+    setTimeout(() => { // Introduces a delay
+        const h1Elements = document.querySelectorAll('h1.chivo-mono-h1');
+        h1Elements.forEach(element => riseUpText(element));
+
+        const h2Elements = document.querySelectorAll('h2.chivo-mono-h2');
+        h2Elements.forEach((element, index) => {
+            setTimeout(() => riseUpText(element), index * 200);
+        });
+
+        const button = document.getElementById('myworks_button');
+        setTimeout(() => riseUpButton(button), 1000); // Delay after h1 and h2
+
+    }, 3500);  // Example delay of 500 milliseconds
+}
+
+//SCROLL TO SECTION EFFECTS
 $(document).ready(function () {
     $('a[href^="#"]').click(function (event) { // Target links starting with "#"
         event.preventDefault(); // Prevent default jump behavior
@@ -36,7 +62,7 @@ const fadeElements = document.querySelectorAll('.fade-in-element');
 function handleScroll() {
     fadeElements.forEach(element => {
         const rect = element.getBoundingClientRect();
-        const triggerPoint = window.innerHeight + rect.height * 0.5; // 50% of element's height
+        const triggerPoint = window.innerHeight + rect.height * 0.1; // 50% of element's height
 
         if (rect.top <= triggerPoint) {
             element.classList.add('active');
@@ -72,12 +98,3 @@ $(document).ready(function () {
         }, 500); // Adjust scroll speed (1000ms = 1 second)
     });
 });
-
-
-// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-//Sections
-
