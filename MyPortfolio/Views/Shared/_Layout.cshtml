@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/cursor.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/loader.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/modal.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyPortfolio.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +18,54 @@
 
  </head>
 <body>
+    <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel">Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="registration-form container d-flex justify-content-center" style="text-align:center; width:100%;">
+                        <form style="width:80%;">
+                            <div class="d-flex justify-content-center w-100">
+                                <div class="form-floating" style="margin-top: 10px; width: 100%;">
+                                    <input type="text" class="form-control rounded-5 w-100" id="floatingName" placeholder="Name" name="Name" required>
+                                    <label for="floatingName">Name</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center w-100">
+                                <div class="form-floating" style="margin-top: 10px; width: 100%;">
+                                    <input type="email" class="form-control rounded-5 w-100" id="floatingEmail" placeholder="Email" name="Email" required>
+                                    <label for="floatingEmail">Email</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center w-100">
+                                <div class="form-floating" style="margin-top: 10px; width: 100%;">
+                                    <input type="text" class="form-control rounded-5 w-100" id="floatingSubject" placeholder="Subject" name="Subject" required>
+                                    <label for="floatingSubject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center w-100">
+                                <div class="form-floating" style="margin-top: 10px; width: 100%;">
+                                    <textarea class="form-control rounded-5 w-100" rows="10" id="floatingNotes" placeholder="Notes" name="Message" style="height: 110px" maxlength="500" required></textarea>
+                                    <label for="floatingNotes">Message</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center" style="margin-top:10px">
+                                <div class="d-flex justify-content-center col-5 mb-2 ">
+                                    <button class="btn btn-outline-secondary rounded-5" type="submit">SEND →</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
-        <nav class="navbar">
+        <nav class="navbar  d-flex justify-content-between align-items-center">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img id="navbar_logo" class="ms-4" src="~/img/logo.png" />
@@ -44,6 +91,5 @@
     <script src="~/js/loader.js"></script>
     <script src="~/js/cursor.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    <div class="cursor"></div>
 </body>
 </html>
