@@ -512,7 +512,7 @@ section {
 }
 
 #about-img {
-    height: 550px;
+    height: 390px;
     width: 500px;
     border-radius: 10px;
     /* Outline */
@@ -553,7 +553,7 @@ section {
 }
 
 .about-text {
-    font-size: 30px;
+    font-size: 28px;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -562,7 +562,7 @@ section {
 }
 
 #about-name {
-    font-size: 30px;
+    font-size: 28px;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: italic;
@@ -588,7 +588,7 @@ section {
 }
 
 .about-info-text {
-    font-size: 22px;
+    font-size: 20px;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
