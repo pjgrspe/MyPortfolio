@@ -18,6 +18,13 @@ html {
   min-height: 100%;
 }
 
+@media (hover: none) {
+    /* Styles to disable the cursor on touchscreens */
+    .cursor {
+        display: none;
+    }
+}
+
 /* General scrollbar area */
 ::-webkit-scrollbar {
     width: 10px; /* Adjust the width as needed */
@@ -129,33 +136,7 @@ section {
     transform: translateY(0);
 }
 
-/* arrow fade in */
-.category-text {
-    position: relative; /* Allows positioning of the arrow within the div */
-    transition: font-size 0.3s ease-out;
-}
 
-.category-text:hover {
-    font-size: 68px; /* Adjust as desired. Decrease the value for more shrink */
-    transition: font-size 0.3s ease; /* Transition for text size */
-}
-
-.fas.fa-arrow-right {
-    opacity: 0; /* Hide the arrow initially */
-    position: absolute; /* Position relative to the parent */
-    right: 10px; /* Adjust right offset as needed */
-    top: 50%; /* Vertically center the arrow */
-    transform: translateY(-50%);
-    transition: opacity 0.3s ease; /* Add a fade-in/out transition */
-}
-
-.category-text:hover .fas.fa-arrow-right {
-    opacity: 1; /* Make the arrow visible on hover */
-}
-
-.clickable-div {
-    cursor: none;
-}
 
 
 /*TEXT STYLES*/
@@ -186,6 +167,33 @@ section {
     color: black;
 }
 
+/* Tablet: 768px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .chivo-mono-h4 {
+        font-size: 28px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 767px) {
+    .chivo-mono-h4 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 455px) {
+    .chivo-mono-h4 {
+        font-size: 14px;
+    }
+}
+
+/* CATEGORY TEXT */
+.category-text {
+    position: relative; /* Allows positioning of the arrow within the div */
+    transition: font-size 0.3s ease-out;
+}
+
 .category-text {
     font-size: 72px;
     font-optical-sizing: auto;
@@ -194,6 +202,59 @@ section {
     color: black;
     text-align: left;
 }
+
+/* Tablet: 768px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .category-text {
+        font-size: 72px;
+    }
+    .category-text:hover{
+        transition: font-size 0.3s ease;
+        font-size: 68px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 767px) {
+    .category-text {
+        font-size: 40px;
+    }
+    .category-text:hover{
+        transition: font-size 0.3s ease;
+        font-size: 36px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 455px) {
+    .category-text {
+        font-size: 30px;
+    }
+    .category-text:hover{
+        transition: font-size 0.3s ease;
+        font-size: 26px;
+    }
+}
+
+.fas.fa-arrow-right {
+    opacity: 0; /* Hide the arrow initially */
+    position: absolute; /* Position relative to the parent */
+    right: 10px; /* Adjust right offset as needed */
+    top: 50%; /* Vertically center the arrow */
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease; /* Add a fade-in/out transition */
+}
+
+.category-text:hover .fas.fa-arrow-right {
+    opacity: 1; /* Make the arrow visible on hover */
+}
+
+.clickable-div {
+    cursor: none;
+}
+
+
+
 
 .showcase-main-text {
     font-size: 72px;
@@ -218,6 +279,39 @@ section {
     font-style: normal;
     color: black;
     text-align: left;
+}
+
+/* Tablet: 768px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .showcase-main-text, .about-main-text {
+        font-size: 72px;
+    }
+
+    .showcase-sub-text {
+        font-size: 28px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 767px) {
+    .showcase-main-text, .about-main-text {
+        font-size: 40px;
+    }
+
+    .showcase-sub-text {
+        font-size: 20px;
+    }
+}
+
+/* Mobile: 320px */
+@media (max-width: 455px) {
+    .showcase-main-text, .about-main-text {
+        font-size: 30px;
+    }
+
+    .showcase-sub-text {
+        font-size: 14px;
+    }
 }
 
 .category-text i {
@@ -513,7 +607,7 @@ section {
 
 #about-img {
     height: 390px;
-    width: 500px;
+    width: 550px;
     border-radius: 10px;
     /* Outline */
     outline: 2px solid black;
@@ -553,7 +647,7 @@ section {
 }
 
 .about-text {
-    font-size: 28px;
+    font-size: 24px;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -562,7 +656,7 @@ section {
 }
 
 #about-name {
-    font-size: 28px;
+    font-size: 24px;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: italic;
