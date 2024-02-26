@@ -74,10 +74,10 @@ window.addEventListener('scroll', handleScroll);
 
 
 //for arrows
-// Select all the divs containing your category text
+// Select all the divs containing category text
 const categoryDivs = document.querySelectorAll('.category-text');
 
-// Add hover listeners
+// hover listeners
 categoryDivs.forEach(div => {
     div.addEventListener('mouseenter', () => {
         div.querySelector('.fas.fa-arrow-right').classList.add('fade-in');

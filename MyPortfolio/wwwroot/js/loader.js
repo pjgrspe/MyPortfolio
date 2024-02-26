@@ -15,10 +15,8 @@ function hideLoader() {
     startAnimation();
 }
 
-// Example Usage (integrate with your page load logic)
 showLoader(); // Show on initial page load
 
-// ... Later, when content is ready ...
 hideLoader(); 
 
 function preventScroll(event) {

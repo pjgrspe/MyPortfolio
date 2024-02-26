@@ -19,7 +19,7 @@ html {
 }
 
 @media (hover: none) {
-    /* Styles to disable the cursor on touchscreens */
+    /* disable the cursor on touchscreens */
     .cursor {
         display: none;
     }
@@ -37,7 +37,7 @@ html {
 /* The scrollbar handle (thumb) */
 ::-webkit-scrollbar-thumb {
     background: #808080;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -45,7 +45,7 @@ html {
 }
 
 body {
-    margin-bottom: 60px; /* Adjust as needed */
+    margin-bottom: 60px;
     margin: 0px;
     font-family: "Chivo Mono", monospace;
     overflow-x: hidden;
@@ -67,7 +67,7 @@ nav {
 }
 
 #navbar_logo {
-    max-height: 2.5rem; /* Adjust to your desired height */
+    max-height: 2.5rem; 
 }
 
 .container {
@@ -91,7 +91,6 @@ section {
 }
 
 /*HERO PAGE EFFECTS*/
-/* Style for the text that will be typed */
 .rise-up-text {
     opacity: 0; /* Initially hidden */
     transform: translateY(30px); /* Shifted down by 30 pixels */
@@ -190,7 +189,7 @@ section {
 
 /* CATEGORY TEXT */
 .category-text {
-    position: relative; /* Allows positioning of the arrow within the div */
+    position: relative;
     transition: font-size 0.3s ease-out;
 }
 
@@ -201,6 +200,10 @@ section {
     font-style: normal;
     color: black;
     text-align: left;
+}
+
+.category-text:hover {
+    font-size: 68px;
 }
 
 /* Tablet: 768px */
@@ -239,7 +242,7 @@ section {
 .fas.fa-arrow-right {
     opacity: 0; /* Hide the arrow initially */
     position: absolute; /* Position relative to the parent */
-    right: 10px; /* Adjust right offset as needed */
+    right: 10px; /* Adjust right offset */
     top: 50%; /* Vertically center the arrow */
     transform: translateY(-50%);
     transition: opacity 0.3s ease; /* Add a fade-in/out transition */
@@ -349,9 +352,9 @@ section {
 #btn-menu { /* Remove default button border */
     border-color: #cccccc;
     background-color: transparent; /* Make background transparent */
-    padding: 12px 12px; /* Adjust padding for the desired size */
+    padding: 12px 12px; /* Adjust padding */
     border-radius: 100%; /* Create the circle shape */
-    display: flex; /* To center the icon */
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: none;
@@ -365,13 +368,13 @@ section {
 
 #btn-menu i {
   color: white;
-  font-size: 13px;/* Example color for the icon */
+  font-size: 13px;
 }
 
 #myworks_button {
     padding: 15px 30px; /* Adjust padding for larger button */
     /*text*/
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 18px; /* Adjust font size */
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -390,7 +393,6 @@ section {
     transform: scale(1.1);
 }
 
-/* Text Animation - Option 1: Pseudo-element */
 #myworks_button::after {
     position: absolute; /* Allows positioning within the button */
     display: block; /* Necessary for the animation */
@@ -424,19 +426,19 @@ section {
     border-radius: 10px;
 }
 
-    .item-4grid:after {
-        content: "";
-        display: block;
-        background-color: inherit;
-        opacity: 0.9;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: scale(2) translateY(-100%); /* No X-axis translation, no rotation */
-        transition: transform 3s cubic-bezier(0.23, 1, 0.32, 1);
-    }
+.item-4grid:after {
+    content: "";
+    display: block;
+    background-color: inherit;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(2) translateY(-100%); /* No X-axis translation, no rotation */
+    transition: transform 3s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
 .item-4grid:hover:after {
     transform: scale(2) translateY(0%);
@@ -453,7 +455,7 @@ section {
 
 .item-5grid {
     position: relative;
-    float: left; /* Keep this for now */
+    float: left; 
     width: 20% !important;
     flex: 1 0 18% !important;
     margin: 10px;
@@ -529,8 +531,8 @@ section {
 
 .item-image {
     display: flex; /* Establish flexbox layout */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    justify-content: center; 
     height: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -546,7 +548,7 @@ section {
     max-width: 100%; /* Optionally constrain max-width*/
     height: auto;
     line-height: 0;
-    transform: scale(1.1); /* Example: increase size by 10%  */
+    transform: scale(1.1); 
 }
 
 .item-image::before {
@@ -688,7 +690,7 @@ section {
     font-style: normal;
     color: black;
     text-align: justify;
-    text-align-last: left; /* Or 'center', 'right' as needed */
+    text-align-last: left; 
 }
 
 #contact-module1 {
@@ -696,7 +698,7 @@ section {
     width: 450px;
     border-radius: 10px;
     /* Outline */
-    outline: 2px solid black; /* Example color and thickness */
+    outline: 2px solid black; 
     margin-bottom: 50px;
 }
 
@@ -753,7 +755,6 @@ section {
     transform: scale(1.1);
 }
 
-/* Text Animation - Option 1: Pseudo-element */
 #contact_button::after {
     position: absolute; /* Allows positioning within the button */
     display: block; /* Necessary for the animation */
